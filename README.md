@@ -13,6 +13,40 @@ go get -u github.com/GaruGaru/donezo
 
 ```
 
+## Usage
+
+
+Add task 
+
+```bash
+
+donezo add "today i've fixed the p=np problem!"
+
+```
+
+List current task
+
+```bash
+
+donezo list today
+
+```
+
+List yesterday's task
+
+```bash
+
+donezo list yesterday
+
+```
+
+List specific date tasks
+
+```bash
+
+donezo list day 01-02-2006
+
+```
 
 ## Build locally
 
