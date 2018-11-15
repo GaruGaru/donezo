@@ -10,16 +10,16 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "todo",
-	Short: "todo is a cli helper for devs that needs to work instead of getting micromanaged",
+	Use:   "donezo",
+	Short: "donezo is a cli helper for devs that needs to work instead of getting micromanaged",
 }
 
 func DBPath() string {
 	usr, err := user.Current()
 	if err != nil {
-		path.Join("/tmp/", ".todo.db")
+		path.Join("/tmp/", ".donezo.db")
 	}
-	return path.Join(usr.HomeDir, ".todo.db")
+	return path.Join(usr.HomeDir, ".donezo.db")
 }
 
 func Repository() tasks.Repository {
