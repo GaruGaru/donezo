@@ -11,9 +11,9 @@ type DBRepository struct {
 	db *bolt.DB
 }
 
-func NewDBManager(path string) (DBRepository, error) {
+func NewDBRepository(path string) (DBRepository, error) {
 	db, err := bolt.Open(path, 0600, nil)
-	return DBRepository{db: db,}, err
+	return DBRepository{db: db}, err
 }
 
 func (dbm DBRepository) Add(time time.Time, task Task) {

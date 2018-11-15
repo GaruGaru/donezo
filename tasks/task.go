@@ -19,4 +19,3 @@ func (t Task) toJson() []byte {
 	}
 	return jsn
 }
-

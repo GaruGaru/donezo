@@ -1,7 +1,10 @@
 COMMAND_NAME=donezo
 BIN_OUTPUT=dist/${COMMAND_NAME}
 
-build:
+fmt:
+	go fmt ./...
+
+build: fmt
 	go build -o ${BIN_OUTPUT}
 
 install: build

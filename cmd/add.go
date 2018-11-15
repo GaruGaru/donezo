@@ -25,13 +25,9 @@ var addCmd = &cobra.Command{
 
 		taskDescription := strings.Join(args, " ")
 
-		dbm, err := tasks.NewDBManager(DBPath())
-		if err != nil {
-			fmt.Println(err.Error())
-			return
-		}
+		repository := Repository()
 
-		dbm.Add(time.Now(), tasks.Task{
+		repository.Add(time.Now(), tasks.Task{
 			Description: taskDescription,
 			Effort:      &taskEffort,
 			EffortType:  &taskEffortType,

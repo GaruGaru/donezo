@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"github.com/GaruGaru/done/tasks"
 	"github.com/spf13/cobra"
 	"log"
 	"os"
@@ -15,10 +16,18 @@ var rootCmd = &cobra.Command{
 
 func DBPath() string {
 	usr, err := user.Current()
-	if err != nil{
+	if err != nil {
 		path.Join("/tmp/", ".todo.db")
 	}
 	return path.Join(usr.HomeDir, ".todo.db")
+}
+
+func Repository() tasks.Repository {
+	db, err := tasks.NewDBRepository(DBPath())
+	if err != nil {
+		panic(err)
+	}
+	return db
 }
 
 func Execute() {
