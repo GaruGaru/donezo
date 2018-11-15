@@ -5,6 +5,10 @@
 
 Donezo is a cli helper for devs that needs to work instead of getting micromanaged
 
+
+![Logo](https://github.com/GaruGaru/donezo/blob/master/res/terminal-example-00.png)
+
+
 ## Installation
 
 ```bash
